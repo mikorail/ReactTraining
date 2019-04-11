@@ -1,33 +1,208 @@
+/* Form Styling part */
+body {
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a:hover{
+  text-decoration: none;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.wrapper {
+  padding: 35px;
+}
+
+.App__Aside--img {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+
+.App__Form {
+  width: 50%;
+  background-color: rgb(236, 237, 238);
+  padding: 25px 40px;
+  overflow: auto;
+}
+
+.FormCenter {
+  margin-bottom: 80px;
+}
+
+.FormTitle {
+  color: #707C8B;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+
+.FormTitle__Link {
+  color: #707C8B;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+.FormTitle__Link:first-child {
+  margin-left: 0;
+}
+
+.FormTitle__Link--Active {
+  color: black;
+  border-bottom: 1px solid #6e95e9;
+}
+
+.FormField {
+  margin-bottom: 40px;
+}
+
+.FormField__Label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(104, 103, 103);
+}
+.FormField__Input {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  color: black;
+  outline: none;
+  border-bottom: 1px solid #6e95e9;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.FormField__Input::placeholder {
+  color: #616E7F;
+}
+
+.FormField__Button {
+  background-color: #4db4ce;
   color: white;
+  border: none;
+  outline: none;
+  padding: 15px 70px;
+  font-size: .8em;
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.FormField__Link {
+  color: #66707D;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1.5px solid #6e95e9;
+  padding-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FormField__TermsLink {
+  color: black;
+  border-bottom: 1px solid #6e95e9;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+}
+.FormField__Radio {
+  padding-top: 15px;
+}
+
+.FormField__Radio--laki {
+  margin-right: 15px;
+}
+
+.FormField__Radio--perempuan {
+  margin-right: 15px;
+  margin-left: 35px;
+}
+
+.hello {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+/* menghilangkan arrows on number inputs */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.FormBackground {
+  background: #2980b9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Aside styling */
+
+.App__Aside {
+  width: 50%;
+  color: rgb(243, 245, 247);
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(-45deg, #054277, #021629);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-45deg, #054277, #01031b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Aside_author {
+  color: #2980b9;
+  margin-top: 80px;
+  margin-left: 78px;
+  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 18px;
+}
+.Aside_text-1 {
+  text-align: center;
+  font-size: 42px;
+  line-height: 18px;
+}
+.Aside_text-2 {
+  text-align: center;
+  font-size: 33px;
+  line-height: 18px;
+}
+/* http://localhost/DecorativeBackgrounds/index5.html */
+.demo-5 {
+	--color-text: #fff;
+	--color-bg: #0F1617;
+	--color-link: #3b297e;
+	--color-link-hover: #333;
+	--color-info: #ac1122;
+	--color-title: #fff;
+	--color-subtitle: #fff;
+    --color-subtitle-bg: #4dc4a8;
+}
+
+.content__title {
+	font-size: 10vw;
+	font-weight: normal;
+	color: var(--color-title);
+	text-align: center;
+	margin: 0;
+	pointer-events: none;
+}
+
+.content__subtitle {
+	font-size: 1.25em;
+	background: var(--color-subtitle-bg);
+	color: var(--color-subtitle);
+	padding: 0.45em 0.5em;
+	line-height: 1;
+	margin: 0;
+	letter-spacing: 0.5em;
+	text-indent: 0.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 55em) {
+	.content__title {
+		font-size: 3.5em;
+	}
+	.content__subtitle {
+		font-size: 0.85em;
+	}
 }

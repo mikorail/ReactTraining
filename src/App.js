@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
+// STYLE CSS
 import './App.css';
+import './style/menu.scss';
+import './style/input.css';
+// Page route
+import Home from './pages/Home';
+import Form from './pages/Form';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import NoMatch from './pages/NoMatch';
+import Menu from './menu/Menu';
+import CreateTraining from './menu/CreateTraining';
+import ListTraining from './menu/ListTraining';
+import Profile from './menu/Profile';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          {/* Route awal dibuat exact agar tidak keluar di tiap page*/}
+          <Route exact path="/" component={Home}/>
+          <Route path="/form/" component={Form}/>
+          <Route path="/form/login" component={Login}/>
+          <Route path="/form/register" component={Register}/>
+          {/* Route menu tidak dibuat exact agar selalu keluar jika ada path yang menggunakan /menu/ */}
+          <Route path="/menu/" component={Menu}/>
+          <Route path="/menu/create" component={CreateTraining}/>
+          <Route path="/menu/list" component={ListTraining}/>
+          <Route path="/menu/profile" component={Profile}/>
+          {/* Route 404 */}
+          <Route component={NoMatch}/>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
