@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class Register extends Component {
     constructor() {
@@ -103,7 +103,10 @@ class Register extends Component {
             {/* Submit */}
             <div className="FormField">
                 {/* <Link to="/menu/create"> */}
-                    <button className="FormField__Button mr-20">Submit</button> 
+                <Link to="/menu/create">
+                <button className="FormField__Button mr-20">Submit</button> 
+                </Link>
+                    
                 {/* </Link> */}
                 {/* <Link to="/login" className="FormField__Link">I'm already member</Link> */}
             </div>

@@ -26,26 +26,9 @@ class Login extends Component {
         this.setState({
           [name]: value
         });
-        function CheckPassword(inputtxt) 
-        { 
-        var passw= /^[A-Za-z]\w{7,15}$/;
-        if(this.password.value.match(passw)) 
-        { 
-        alert('Correct, try another...')
-        return true;
-        }
-        else
-        { 
-        alert('Wrong...!')
-        return false;
-        }
-        }
+    }
+    
 
-        
-    }
-    validate(){
-        
-    }
     handleSubmit(e) {
         e.preventDefault();
 
