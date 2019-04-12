@@ -23,13 +23,16 @@ class Login extends Component {
           [name]: value
         });
     }
-
+    valLogin(username,password){
+        
+    }
     handleSubmit(e) {
         e.preventDefault();
 
         console.log('Data masuk dengan isi :');
         console.log(this.state);
     }
+
 
     render() {
         return (
@@ -48,7 +51,7 @@ class Login extends Component {
 
                 <div className="FormField">
                     <Link to="/menu/create">
-                        <button className="FormField__Button mr-20">Login</button>
+                        <button className="FormField__Button mr-20" onCLick="valLogin">Login</button>
                     </Link>
                     {/* <Link to="/" className="FormField__Link">Create an account</Link> */}
                 </div>
