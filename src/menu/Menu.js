@@ -5,7 +5,13 @@ import CreateTraining from './CreateTraining';
 import ListTraining from './ListTraining';
 import Profile from './Profile';
 
+
 class Menu extends Component {
+    logout(){
+        localStorage.clear();
+        window.location.href = 'http://localhost:3000';
+    };  
+
     render(){
         return (
             <div className="bodyMenu">
@@ -19,7 +25,11 @@ class Menu extends Component {
                     <Link to="/menu/create"><li className="menu_create"><span>Request Training</span></li></Link>
                     <Link to="/menu/list"><li className="menu_list"><span>List Training</span></li></Link>
                     <Link to="/menu/profile"><li className="menu_profile"><span>Profile</span></li></Link>
-                    <Link to="/"><li className="menu_logout"><span>Logout</span></li></Link>
+                    <Link to="/">
+                    <li className="menu_logout" onClick={() => { if (window.confirm('Are you sure you wish to logout ?')) this.logout() } }>
+                        <span>Logout</span>
+                    </li>
+                    </Link>
                     </ul>
                 </nav>
 
