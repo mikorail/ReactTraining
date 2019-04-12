@@ -9,7 +9,7 @@ import Profile from './Profile';
 class Menu extends Component {
     logout(){
         localStorage.clear();
-        window.location.href = 'http://localhost:3000';
+        window.location.href = 'http://localhost:3000/form/Login';
     };  
 
     render(){
